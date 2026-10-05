@@ -10,6 +10,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/api', require('./rutas/auth'));
 app.use('/api', require('./rutas/sesion'));
+app.use('/api', require('./rutas/password'));
 
 app.use((err, req, res, next) => {
   if (err.type === 'entity.parse.failed')
@@ -19,3 +20,4 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(config.PORT, () => console.log(`Servidor en http://localhost:${config.PORT}`));
+
