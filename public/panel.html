@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi cuenta</title><link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Mi cuenta</h1>
+  <p id="quien">Cargando...</p>
+  <p id="enlace-admin" hidden><a href="admin.html">Administrar usuarios</a></p>
+  <button id="salir">Cerrar sesión</button>
+  <h2>Cambiar contraseña</h2>
+  <form data-endpoint="/api/cambiar-password">
+    <label>Contraseña actual <input name="actual" type="password" autocomplete="current-password"></label>
+    <label>Contraseña nueva <input name="nueva" type="password" autocomplete="new-password"></label>
+    <button>Cambiar</button>
+  </form>
+  <p id="mensaje"></p>
+  <script src="app.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>
