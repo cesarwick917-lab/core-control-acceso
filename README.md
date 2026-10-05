@@ -44,4 +44,5 @@ Node.js 20.6 o superior.
 - **RD-09:** reiniciar `npm start`; los usuarios siguen en `datos.db`.
 
 ## Máquina de estados de negocio
-Pendiente de entregar en este hito (ver docs/ cuando se agregue).
+Entidad Entrega. Estados y transiciones en src/dominio/entregaEstados.js; tabla en docs/maquina-de-estados.md.
+
