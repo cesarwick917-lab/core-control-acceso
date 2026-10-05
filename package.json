@@ -1,0 +1,27 @@
+{
+  "name": "core-control-acceso",
+  "version": "1.0.0",
+  "description": "Proyecto: Despacho de entregas a domicilio (JavaScript, Node.js).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesarwick917-lab/core-control-acceso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cesarwick917-lab/core-control-acceso/issues"
+  },
+  "homepage": "https://github.com/cesarwick917-lab/core-control-acceso#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.2.1",
+    "nodemailer": "^10.0.14"
+  }
+}

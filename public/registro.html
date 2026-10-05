@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Registro</h1>
+  <form data-endpoint="/api/registro">
+    <label>Correo <input name="correo" type="text" autocomplete="email"></label>
+    <label>Contraseña <input name="password" type="password" autocomplete="new-password"></label>
+    <button>Registrarme</button>
+  </form>
+  <p id="mensaje"></p>
+  <p><a href="reenviar.html">Reenviar enlace de activación</a></p>
+  <script src="app.js"></script>
+</body>
+</html>
