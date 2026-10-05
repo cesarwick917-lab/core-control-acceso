@@ -1,12 +1,15 @@
 ﻿const express = require('express');
+const cookieParser = require('cookie-parser');
 const path = require('path');
 const config = require('./config');
 require('./db');
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/api', require('./rutas/auth'));
+app.use('/api', require('./rutas/sesion'));
 
 app.use((err, req, res, next) => {
   if (err.type === 'entity.parse.failed')
