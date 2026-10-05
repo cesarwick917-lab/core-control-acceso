@@ -38,8 +38,22 @@ CREATE TABLE IF NOT EXISTS sesiones (
   token_hash TEXT NOT NULL UNIQUE,
   creada INTEGER NOT NULL,
   cerrada INTEGER NOT NULL DEFAULT 0
-); CREATE TABLE IF NOT EXISTS codigos_recuperacion (id INTEGER PRIMARY KEY AUTOINCREMENT, usuario_id INTEGER NOT NULL REFERENCES usuarios(id), codigo_hash TEXT NOT NULL UNIQUE, vence INTEGER NOT NULL, usado INTEGER NOT NULL DEFAULT 0);
+);
+CREATE TABLE IF NOT EXISTS codigos_recuperacion (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  usuario_id INTEGER NOT NULL REFERENCES usuarios(id),
+  codigo_hash TEXT NOT NULL UNIQUE,
+  vence INTEGER NOT NULL,
+  usado INTEGER NOT NULL DEFAULT 0
+);
+CREATE TABLE IF NOT EXISTS entregas (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  descripcion TEXT NOT NULL,
+  direccion TEXT NOT NULL,
+  estado TEXT NOT NULL DEFAULT 'Pendiente',
+  repartidor_id INTEGER REFERENCES usuarios(id),
+  creado INTEGER NOT NULL
+);
 `);
 
 module.exports = db;
-
