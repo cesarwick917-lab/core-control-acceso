@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reenviar activación</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Reenviar activación</h1>
+  <form data-endpoint="/api/reenviar">
+    <label>Correo <input name="correo" type="text" autocomplete="email"></label>
+    <button>Reenviar</button>
+  </form>
+  <p id="mensaje"></p>
+  <p><a href="registro.html">Volver al registro</a></p>
+  <script src="app.js"></script>
+</body>
+</html>
